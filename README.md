@@ -5,7 +5,7 @@
 - Johan Leonardo Castellanos Ruiz.
 - Juan Pablo Cardenas Higuera.
 
-##Cinemática 
-##ROS
-##Toolbox
-##Matlab + ROS + Toolbox:
+## Cinemática 
+## ROS
+## Toolbox
+## Matlab + ROS + Toolbox:
