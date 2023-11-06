@@ -106,3 +106,12 @@ Se buscan las poses mediante MATLAB de la siguiente tabla
 |   4    |   85   |  -20   |   55   |   25   |
 |   5    |   80   |  -35   |   55   |  -45   |
 
+Con el siguiente codigo tenemos la lectura del mensaje enviado por el publisher
+```MATLAB
+Subcriber=rossubscriber('/joint_trajectory',JointTrajectory);
+%crea una suscripcion a la pose del nodo turtlesim
+pause(2)
+%guardamos el ultimo mensaje publicado por los nodos
+LastMesage=Subcriber.LatestMessage;
+```
+
