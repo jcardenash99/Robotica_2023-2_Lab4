@@ -16,7 +16,7 @@ Inicialmente se define la cinemática directa del robot Pincher teniendo haciend
 
 ### Tabla 1 parametros D_H robot pincher.
 ## ROS
-´´´
+```python
 from cmath import pi
 import numpy as np
 import rospy
@@ -62,8 +62,36 @@ if __name__ == '__main__':
         joint_publisher()
     except rospy.ROSInterruptException:
         pass
-´´´
+```
 ## Toolbox
+```MATLAB
+l = [0, 10.5, 10.5, 7.5];
+q = [0, 0, 0, 0]*pi/180;
+offset = [0, pi/2, -pi/2, 0];
+DHT = [q(1) 4.5 l(1) pi/2 0 offset(1);
+             q(2) 0   l(2) 0    0 offset(2);
+             q(3) 0   l(3) 0    0 offset(3);
+             q(4) 0   l(4) pi/2 0 offset(4)
+             ];
+L21(1) = Link(DHT(1,:));
+L21(2) = Link(DHT(2,:));
+L21(3) = Link(DHT(3,:));
+L21(4) = Link(DHT(4,:));
+Robot_punto21 = SerialLink(L21,'name','Phantom x');
+w = [-10 10 -10 10 -4.5 40];
+Q=[0 0 0 0
+   25 25 20 -20
+   -35 35 -30 30
+   85 -20 55 25
+   80 -35 55 -45]*pi/180;
+for i=1:5    
+    Robot_punto21.teach(Q(i,:),'workspace',w);
+    xlim([-35,35])
+    ylim([-35,35])
+    zlim([0,40])
+    pause(5);
+end
+```
 ## Matlab + ROS + Toolbox:
 Se buscan las poses mediante MATLAB de la siguiente tabla
  |    q1   |   q2   |   q3   |   q4   |   q5   |
