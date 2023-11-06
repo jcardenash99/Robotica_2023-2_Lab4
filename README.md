@@ -92,6 +92,8 @@ for i=1:5
     pause(5);
 end
 ```
+![image](https://github.com/jcardenash99/Robotica_2023-2_Lab4/assets/61796945/0dbf39b1-35bd-4fad-bfa0-0d8eebf422e7)
+
 ## Matlab + ROS + Toolbox:
 Se buscan las poses mediante MATLAB de la siguiente tabla
  |    q1   |   q2   |   q3   |   q4   |   q5   |
