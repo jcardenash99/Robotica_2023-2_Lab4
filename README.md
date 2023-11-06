@@ -18,3 +18,12 @@ Inicialmente se define la cinemática directa del robot Pincher teniendo haciend
 ## ROS
 ## Toolbox
 ## Matlab + ROS + Toolbox:
+Se buscan las poses mediante MATLAB de la siguiente tabla
+ |    q1   |   q2   |   q3   |   q4   |   q5   |
+| ------- | ------ | ------ | ------ | ------ |
+|   1    |    0   |    0   |    0   |    0   |
+|   2    |   25   |   25   |   20   |  -20   |
+|   3    |  -35   |   35   |  -30   |   30   |
+|   4    |   85   |  -20   |   55   |   25   |
+|   5    |   80   |  -35   |   55   |  -45   |
+
