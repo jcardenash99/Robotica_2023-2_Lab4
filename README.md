@@ -68,11 +68,11 @@ if __name__ == '__main__':
 l = [0, 10.5, 10.5, 7.5];
 q = [0, 0, 0, 0]*pi/180;
 offset = [0, pi/2, -pi/2, 0];
-DHT = [q(1) 4.5 l(1) pi/2 0 offset(1);
-             q(2) 0   l(2) 0    0 offset(2);
-             q(3) 0   l(3) 0    0 offset(3);
-             q(4) 0   l(4) pi/2 0 offset(4)
-             ];
+DHT = [q(1) 4.5 0       0   offset(1);
+       q(2) 0   l(2)    0   offset(2);
+       q(3) 0   l(3)    0   offset(3);
+       q(4) 0   l(4)    0   offset(4)
+     ];
 L21(1) = Link(DHT(1,:));
 L21(2) = Link(DHT(2,:));
 L21(3) = Link(DHT(3,:));
