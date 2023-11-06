@@ -16,6 +16,7 @@ Inicialmente se define la cinemática directa del robot Pincher teniendo haciend
 
 ### Tabla 1 parametros D_H robot pincher.
 ## ROS
+Mediante el siguiente codigo el cual forma parte de la carpeta px_phantom la con la cual se hizo uso del comando `catkin_make` en la terminal de linux podemos enviar los datos mediante el publisher `jointTrajectory`.
 ```python
 from cmath import pi
 import numpy as np
@@ -64,6 +65,7 @@ if __name__ == '__main__':
         pass
 ```
 ## Toolbox
+Para vizualizar las posiciones en matlab tenemos el siguiente codigo el cual crea las articulaciones del robot desde la tabla de parametros de `DHT`, como podemos observar en la imagen el robot iene coincidencia con el robot phantom_x, en la imagen se puede observar la segunda posicion del robot.
 ```MATLAB
 l = [0, 10.5, 10.5, 7.5];
 q = [0, 0, 0, 0]*pi/180;
@@ -92,6 +94,8 @@ for i=1:5
     pause(5);
 end
 ```
+![image](https://github.com/jcardenash99/Robotica_2023-2_Lab4/assets/61796945/0dbf39b1-35bd-4fad-bfa0-0d8eebf422e7)
+
 ## Matlab + ROS + Toolbox:
 Se buscan las poses mediante MATLAB de la siguiente tabla
  |    q1   |   q2   |   q3   |   q4   |   q5   |
